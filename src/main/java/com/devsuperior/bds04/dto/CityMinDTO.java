@@ -4,23 +4,21 @@ import com.devsuperior.bds04.entities.City;
 import jakarta.validation.constraints.NotBlank;
 
 
-public class CityDTO  {
-
+public class CityMinDTO {
 
 	private Long id;
 
-	@NotBlank(message = "Campo requerido")
 	private String name;
-	
-	public CityDTO() {
+
+	public CityMinDTO() {
 	}
 
-	public CityDTO(Long id, String name) {
+	public CityMinDTO(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
-	
-	public CityDTO(City entity) {
+
+	public CityMinDTO(City entity) {
 		id = entity.getId();
 		name = entity.getName();
 	}
